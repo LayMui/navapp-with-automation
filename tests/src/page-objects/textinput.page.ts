@@ -19,7 +19,7 @@ class TextInputPage extends Page {
 
           await $('~AhuaTextInput').waitForDisplayed()
           await $('~AhuaTextInput').touchAction('tap') //Issue with touchAction
-          await $('~AhuaTextInput').setValue(text)
+          await $('~AhuaTextInput').addValue(text)
 
           
   }
