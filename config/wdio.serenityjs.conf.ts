@@ -3,13 +3,11 @@ import isCI = require('is-ci')
 import { ConsoleReporter } from '@serenity-js/console-reporter'
 import { ArtifactArchiver } from '@serenity-js/core'
 import { SerenityBDDReporter } from '@serenity-js/serenity-bdd'
-import {
-  Photographer,
-  TakePhotosOfInteractions,
-  WebdriverIOConfig,
-} from '@serenity-js/webdriverio'
+import { Photographer, TakePhotosOfInteractions } from '@serenity-js/web'
 
-import { Actors } from '../src'
+import { WebdriverIOConfig } from '@serenity-js/webdriverio'
+
+import { Actors } from '../tests/src'
 
 export const config: WebdriverIOConfig = {
   // =========================
@@ -54,7 +52,7 @@ export const config: WebdriverIOConfig = {
   // If you are calling `wdio` from an NPM script (see https://docs.npmjs.com/cli/run-script),
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
-  specs: ['./features/**/*.feature'],
+  specs: ['./tests/features/**/*.feature'],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -86,24 +84,14 @@ export const config: WebdriverIOConfig = {
       // maxInstances can get overwritten per capability. So if you have an in-house Selenium
       // grid with only 5 firefox instances available you can make sure that not more than
       // 5 instances get started at a time.
-      maxInstances: 5,
+      //  maxInstances: 5,
       //
-      browserName: 'chrome',
-      acceptInsecureCerts: true,
+      //  browserName: 'chrome',
+      //  acceptInsecureCerts: true
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
       // excludeDriverLogs: ['bugreport', 'server'],
-
-      'goog:chromeOptions': {
-        args: [
-          // '--headless',
-          '--disable-infobars',
-          '--no-sandbox',
-          '--disable-gpu',
-          '--window-size=1024,768',
-        ].concat(isCI ? ['--headed'] : []), // run in headless mode on the CI server,
-      },
     },
   ],
   //
@@ -137,10 +125,10 @@ export const config: WebdriverIOConfig = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: '',
+  baseUrl: 'http://localhost',
   //
   // Default timeout for all waitFor* commands.
-  waitforTimeout: 120000,
+  waitforTimeout: 10000,
   //
   // Default timeout in milliseconds for request
   // if browser driver or grid doesn't send response
@@ -153,8 +141,14 @@ export const config: WebdriverIOConfig = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  services: ['chromedriver'],
+  services: [],
 
+  // Framework you want to run your specs with.
+  // The following are supported: Mocha, Jasmine, and Cucumber
+  // see also: https://webdriver.io/docs/frameworks
+  //
+  // Make sure you have the wdio adapter package for the specific framework installed
+  // before running any tests.
   //
   // The number of times to retry the entire specfile when it fails as a whole
   // specFileRetries: 1,
@@ -165,29 +159,41 @@ export const config: WebdriverIOConfig = {
   // Whether or not retried specfiles should be retried immediately or deferred to the end of the queue
   // specFileRetriesDeferred: false,
   //
-  // Native WebdriverIO reporter for stdout.
+  // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  // reporters: ['spec'],
+  reporters: ['spec'],
 
-  // Cucumber.js configuration
-  // see: https://serenity-js.org/modules/cucumber/class/src/cli/CucumberConfig.ts~CucumberConfig.html
+  //
+  // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
-    require: ['./src/support/*.ts', './src/step-definitions/*.ts'],
-    // <string[]> (type[:path]) specify native Cucumber.js output format, if needed. Optionally supply PATH to redirect formatter output (repeatable)
-    format: [],
-    // <string> (name) specify the profile to use
-    profile: '',
+    require: ['./tests/src/**/*.ts'],
+    // <boolean> show full backtrace for errors
+    backtrace: false,
+    // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
+    requireModule: [],
+    // <boolean> invoke formatters without executing steps
+    dryRun: false,
+    // <boolean> abort the run on first failure
+    failFast: false,
+    // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
+    format: ['pretty'],
+    // <boolean> hide step definition snippets for pending steps
+    snippets: true,
+    // <boolean> hide source uris
+    source: true,
+    // <string[]> (name) specify the profile to use
+    profile: [],
     // <boolean> fail if there are any undefined or pending steps
     strict: false,
-    // <string[] | string> (expression) only execute the features or scenarios with tags matching the expression
-    tags: ['@test'],
+    // <string> (expression) only execute the features or scenarios with tags matching the expression
+    tagExpression: '@test',
     // <number> timeout for step definitions
     timeout: 60000,
-    retry: 1,
+    // <boolean> Enable this config to treat undefined definitions as warnings.
+    ignoreUndefinedDefinitions: false,
   },
-
   //
   // =====
   // Hooks
@@ -284,16 +290,16 @@ export const config: WebdriverIOConfig = {
    * @param {string}                 result.error    error stack if scenario failed
    * @param {number}                 result.duration duration of scenario in milliseconds
    */
-  // afterScenario: function (world, result) {
-  // },
+  //afterScenario: function (world, result) {
+  //},
   /**
    *
    * Runs after a Cucumber Feature.
    * @param {String}                   uri      path to feature file
    * @param {GherkinDocument.IFeature} feature  Cucumber feature object
    */
-  // afterFeature: function (uri, feature) {
-  // },
+  ///afterFeature: function (uri, feature) {
+  //},
 
   /**
    * Runs after a WebdriverIO command gets executed
@@ -319,8 +325,7 @@ export const config: WebdriverIOConfig = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that ran
    */
-  // afterSession: function (config, capabilities, specs) {
-  // },
+  afterSession: function (config, capabilities, specs) {},
   /**
    * Gets executed after all workers got shut down and the process is about to exit. An error
    * thrown in the onComplete hook will result in the test run failing.
@@ -337,5 +342,5 @@ export const config: WebdriverIOConfig = {
    * @param {String} newSessionId session ID of the new session
    */
   //onReload: function(oldSessionId, newSessionId) {
-  //}
+  // }
 }
