@@ -9,7 +9,8 @@ To run the test
 
 To start the metro bundler
 ```
-yarn ios
+Go to xcode and open ios/navapp.xcworkspace
+and build 
 ```
 To run the test in iOS Simulator iphone 13 iOS 15.2.
 
