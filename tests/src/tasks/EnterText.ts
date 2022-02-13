@@ -12,7 +12,7 @@ export const EnterText = {
         isVisible()
       ),
       Click.on(AhuaTextInputPage.ahuaTextInputButton()),
-      Wait.until(AhuaTextInputPage.ahuaTextInput(), isVisible()),
-      Enter.theValue(text).into(AhuaTextInputPage.ahuaTextInput())
+      Wait.until(AhuaTextInputPage.RNTextInput(), isVisible()),
+      Enter.theValue(text).into(AhuaTextInputPage.RNTextInput())
     ),
 }

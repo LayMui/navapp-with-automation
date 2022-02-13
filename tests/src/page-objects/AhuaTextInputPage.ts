@@ -1,6 +1,5 @@
 import { By, PageElement } from '@serenity-js/web'
 
-
 export const AhuaTextInputPage = {
   ahuaTextInputButton: () =>
     PageElement.located(By.css('~AhuaTextInputButton')),

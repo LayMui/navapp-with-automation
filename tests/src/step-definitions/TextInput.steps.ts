@@ -9,12 +9,12 @@ import { EnterText } from '../tasks/EnterText'
 
 
 When('{pronoun} want to enter text to the text input {string}', async (actor: Actor, mobileNumber:string) => {
-  await ButtonPage.showButtonAhuaTextInput()
-  await TextinputPage.enterText(mobileNumber)
- //   await actor.attemptsTo(EnterText.intoAhuaTextInput(mobileNumber))
+  // await ButtonPage.showButtonAhuaTextInput()
+  // await TextinputPage.enterText(mobileNumber)
+    await actor.attemptsTo(EnterText.intoAhuaTextInput(mobileNumber))
   
 })
 
 Then('{pronoun} is able to see text entered', async (actor: Actor) => {
-  await TextinputPage.textEntered()
+ // await TextinputPage.textEntered()
 })
