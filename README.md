@@ -7,6 +7,12 @@ appium --version
 
 To run the test
 
+To start the metro bundler
+```
+yarn ios
+```
+To run the test in iOS Simulator iphone 13 iOS 152.
+
 ```
 yarn ios.app
 ```
@@ -24,4 +30,5 @@ Here is after the fix to use $('~inputPress') for the selector
 
 
 https://user-images.githubusercontent.com/11436517/153538052-7eabb9dc-3ba2-4726-8d3d-9bd337667779.mov
+
 
