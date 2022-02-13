@@ -11,7 +11,9 @@ To start the metro bundler
 ```
 yarn ios
 ```
-To run the test in iOS Simulator iphone 13 iOS 152.
+To run the test in iOS Simulator iphone 13 iOS 15.2.
+
+Start the iOS Simulator
 
 ```
 yarn ios.app
