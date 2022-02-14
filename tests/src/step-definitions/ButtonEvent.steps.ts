@@ -8,7 +8,7 @@ import ButtonPage from '../page-objects/button.page'
 
 When(
   '{pronoun} want to trigger button event to change the button title',
-  async (pronoun: Actor) => {
+  async (actor: Actor) => {
      await ButtonPage.showButtonNewCreation()
      await ButtonPage.changeButton()
   }
@@ -16,7 +16,7 @@ When(
 
 Then(
   '{pronoun} is able to see the button title changed',
-  async (pronoun: Actor) => {
+  async (actor: Actor) => {
     await ButtonPage.backToHome()
   }
 )

@@ -10,7 +10,7 @@ Given('{actor} is at the app', (actor: Actor) => {})
 
 When(
   '{pronoun} want to select for {string}',
-  async (pronoun: Actor, component: string) => {
+  async (actor: Actor, component: string) => {
     switch (component) {
       case 'Button':
         await ButtonPage.showButtonNewCreation()
@@ -31,7 +31,7 @@ When(
 
 Then(
   '{pronoun} is able to see the component displayed',
-  async (pronoun: Actor) => {
+  async (actor: Actor) => {
     await ButtonPage.backToHome()
   }
 )
