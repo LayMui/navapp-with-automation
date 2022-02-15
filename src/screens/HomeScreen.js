@@ -8,7 +8,7 @@ const HomeScreen = ({ navigation }) => {
     <>
       <View style={styles.container}>
         <Text
-          {...testProperties('NewCreation')}
+          {...testProperties('Button')}
           style={styles.title}
           onPress={() => navigation.navigate('Button')}
         >

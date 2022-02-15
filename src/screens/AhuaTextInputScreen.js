@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Text } from 'react-native'
-import { TextInput } from 'react-native'
-import { AhuaTextInput } from '@yaradigital/ahua-design-system.ui.ahua-text-input'
+import { StyleSheet, View } from 'react-native'
+import { TextInput, Text } from 'react-native'
 import { testProperties } from '../utility/helper'
-import { TabRouter } from 'react-navigation'
 
 const AhuaTextInputScreen = ({ navigation }) => {
   const [text, setText] = useState('')
@@ -11,6 +9,7 @@ const AhuaTextInputScreen = ({ navigation }) => {
   return (
     <>
       <View style={styles.container}>
+        <Text>Enter your mobile number:</Text>
         <TextInput
           style={{ height: 40, color: 'red' }}
           keyboardType='numeric'
@@ -18,12 +17,12 @@ const AhuaTextInputScreen = ({ navigation }) => {
           onChangeText={(newText) => setText(newText)}
           {...testProperties('PhoneNumberInput')}
         />
-        <AhuaTextInput
+        {/* <AhuaTextInput
           allowFill={true}
           keyboardType='numeric'
           onChange={(newText) => setText(newText)}
           {...testProperties('AhuaTextInput')}
-        />
+        /> */}
       </View>
     </>
   )

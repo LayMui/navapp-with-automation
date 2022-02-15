@@ -13,13 +13,10 @@ When(
   async (actor: Actor, component: string) => {
     switch (component) {
       case 'Button':
-        await ButtonPage.showButtonNewCreation()
+        await ButtonPage.showButton()
         await ButtonPage.customButton()
         await CalendarPage.backToButton()
         await ButtonPage.backToHome()
-        await ButtonPage.showButtonDaughterOfKingdom()
-        await ButtonPage.customButton()
-        await CalendarPage.backToButton()
         break
 
       case 'Calendar':

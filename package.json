@@ -19,8 +19,7 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
     "@types/jquery": "^3.5.13",
-    "@yaradigital/ahua-design-system.ui.ahua-text-input": "^0.0.16",
-    "axios": "^0.25.0",
+    "axios": "^0.26.0",
     "expo": "~44.0.6",
     "expo-splash-screen": "~0.14.2",
     "expo-status-bar": "~1.2.0",

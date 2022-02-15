@@ -1,5 +1,3 @@
-import { Duration } from '@serenity-js/core'
-import { isPresent, Wait } from '@serenity-js/webdriverio'
 import calendarPage from './calendar.page'
 import Page from './page'
 
@@ -14,16 +12,12 @@ class ButtonPage extends Page {
   /**
    * a method to encapsule automation code to interact with the page
    */
-  async showButtonNewCreation() {
-    ;(await $('~NewCreation').waitForDisplayed()) &&
-      (await $('~NewCreation').touchAction('tap'))
+  async showButton() {
+    ;(await $('~Button').waitForDisplayed()) &&
+      (await $('Button').touchAction('tap'))
   }
 
-  async showButtonDaughterOfKingdom() {
-    ;(await $('~DaughterOfKingdom').waitForDisplayed()) &&
-      (await $('~DaughterOfKingdom').touchAction('tap'))
-  }
-
+ 
   async showButtonAhuaTextInput() {
     ;;;(await $('~AhuaTextInputButton').waitForDisplayed()) &&
       (await $('~AhuaTextInputButton').touchAction('tap'))
