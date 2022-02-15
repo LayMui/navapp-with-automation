@@ -1,27 +1,21 @@
 ```
-[iPhone 13 iOS 15.2 #0-2]
-[iPhone 13 iOS 15.2 #0-2] Text Input
-[iPhone 13 iOS 15.2 #0-2]    ✓ Given Jan is at the app
-[iPhone 13 iOS 15.2 #0-2]    ✖ When he want to enter text to the text input "12345678"
-[iPhone 13 iOS 15.2 #0-2]    ? Then he is able to see text entered
-[iPhone 13 iOS 15.2 #0-2]
-[iPhone 13 iOS 15.2 #0-2] 1 passing (15.3s)
-[iPhone 13 iOS 15.2 #0-2] 1 failing
-[iPhone 13 iOS 15.2 #0-2]
-[iPhone 13 iOS 15.2 #0-2] 1) Text Input When he want to enter text to the text input "12345678"
-[iPhone 13 iOS 15.2 #0-2] TypeError: Cannot read properties of undefined (reading 'attemptsTo')
-[iPhone 13 iOS 15.2 #0-2] TypeError: Cannot read properties of undefined (reading 'attemptsTo')
-[iPhone 13 iOS 15.2 #0-2]     at World.<anonymous> (/Users/a845751yara.com/poc/navapp-with-automation/tests/src/step-definitions/TextInput.steps.ts:14:17)
-[iPhone 13 iOS 15.2 #0-2]     at World.executeAsync (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@wdio/utils/build/shim.js:331:27)
-[iPhone 13 iOS 15.2 #0-2]     at World.testFrameworkFnWrapper (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@wdio/utils/build/test-framework/testFnWrapper.js:45:32)
-[iPhone 13 iOS 15.2 #0-2]     at processTicksAndRejections (node:internal/process/task_queues:96:5)
-[iPhone 13 iOS 15.2 #0-2]     at async Object.wrapPromiseWithTimeout (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@wdio/cucumber-framework/node_modules/@cucumber/cucumber/src/time.ts:56:10)
-[iPhone 13 iOS 15.2 #0-2]     at async Object.run (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@wdio/cucumber-framework/node_modules/@cucumber/cucumber/src/user_code_runner.ts:86:16)
-[iPhone 13 iOS 15.2 #0-2]     at async Object.run (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@wdio/cucumber-framework/node_modules/@cucumber/cucumber/src/runtime/step_runner.ts:50:20)
-[iPhone 13 iOS 15.2 #0-2]     at async TestCaseRunner.invokeStep (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@wdio/cucumber-framework/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:130:12)
-[iPhone 13 iOS 15.2 #0-2]     at async TestCaseRunner.runStep (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@wdio/cucumber-framework/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:307:20)
-[iPhone 13 iOS 15.2 #0-2]     at async /Users/a845751yara.com/poc/navapp-with-automation/node_modules/@wdio/cucumber-framework/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:210:36
+[0-2] Error in "0: When he want to enter text to the text input "12345678""
+ConfigurationError: Jan can't BrowseTheWeb yet. Did you give them the ability to do so?
+    at Actor.abilityTo (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@serenity-js/core/src/screenplay/actor/Actor.ts:47:19)
+    at Function.as (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@serenity-js/web/src/screenplay/abilities/BrowseTheWeb.ts:19:22)
+    at WaitUntil.performAs (/Users/a845751yara.com/poc/navapp-with-automation/node_modules/@serenity-js/web/src/screenplay/interactions/Wait.ts:229:29)
+    at /Users/a845751yara.com/poc/navapp-with-automation/node_modules/@serenity-js/core/src/screenplay/activities/TrackedActivity.ts:34:39
+    at async World.<anonymous> (/Users/a845751yara.com/poc/navapp-with-automation/tests/src/step-definitions/TextInput.steps.ts:14:5)
+[0-2] 2022-02-15T03:11:45.489Z INFO webdriver: COMMAND deleteSession()
+[0-2] 2022-02-15T03:11:45.490Z INFO webdriver: [DELETE] http://localhost:4723/session/77a9d37f-1bd4-4a28-8de0-ca9d364a3c9b
+[0-2] FAILED in iOS - /tests/features/TextInput.feature
+2022-02-15T03:11:46.683Z INFO @wdio/cli:launcher: Run onComplete hook
 
-
-Spec Files:      0 passed, 1 failed, 2 skipped, 3 total (100% completed) in 00:01:04
+ "spec" Reporter:
+------------------------------------------------------------------
+[iPhone 13 iOS 15.2 #0-2] Running: iPhone 13 on iOS 15.2 executing /Users/a845751yara.com/poc/navapp-with-automation/tests/apps/navapp.app
+[iPhone 13 iOS 15.2 #0-2] Session ID: 77a9d37f-1bd4-4a28-8de0-ca9d364a3c9b
+[iPhone 13 iOS 15.2 #0-2]
+[iPhone 13 iOS 15.2 #0-2] » /tests/features/TextInput.feature
+[iP
 ```
