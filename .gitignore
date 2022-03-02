@@ -72,4 +72,5 @@ web-build/
 dist/
 
 # @end expo-cli
+#node_modules
 node_modules
