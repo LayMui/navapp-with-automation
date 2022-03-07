@@ -3,7 +3,7 @@ jobs:
   node:
     working_directory: ~/demo
     docker:
-      - image: cimg/node:12.16
+      - image: cimg/node:16.13.0
 
     steps:
       - checkout
@@ -81,11 +81,11 @@ jobs:
       - restore_cache:
           key: pods-v1-{{ checksum "ios/Podfile.lock" }}-{{ arch }}
 
-      - run: 
+      - run:
           command: pod install
           working_directory: ios
 
-      - run: 
+      - run:
           command: bundle install
           working_directory: ios
 
@@ -106,10 +106,10 @@ jobs:
 
       - store_artifacts:
           path: output
-          
+
       - store_test_results:
           path: output/scan
-            
+
   android-build-and-test:
     working_directory: ~/demo/android
     docker:
@@ -154,4 +154,3 @@ workflows:
       - macos-build-and-test:
           requires:
             - node
-            
