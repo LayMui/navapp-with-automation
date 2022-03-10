@@ -1,18 +1,35 @@
 version: 2.1
 
-jobs: # a basic unit of work in a run
+jobs:
   test: # your job name
     macos:
       xcode: 13.2.1 # indicate your selected version of Xcode
-    steps: # a series of commands to run
-      - checkout  # pull down code from your version control system.
+
+    resource_class: medium+
+   # parallelism: 2
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
+
+      - run:
+          name: Install node_modules
+          command: yarn install
+
+      - save_cache:
+          key: v2-dependencies-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
       - run:
           name: Run Unit Tests
           command: xcodebuild test -scheme navapp
 
   build:
     macos:
-      xcode: 12.5.1 # indicate your selected version of Xcode
+      xcode: 13.2.1 # indicate your selected version of Xcode
     steps:
       - checkout
       - run:
@@ -26,12 +43,11 @@ jobs: # a basic unit of work in a run
       - store_artifacts: # store this build output. Read more: https://circleci.com/docs/2.0/artifacts/
           path: app.zip
           destination: app
-
+    
 workflows:
-  version: 2
   test_build:
     jobs:
       - test
-      - build:
-        requires:
-          test
+      #- build:
+      #   requires:
+      #     - test  
