@@ -25,7 +25,7 @@ jobs:
 
       - run:
           name: Run Unit Tests
-          command: xcodebuild test -scheme navapp
+          command: cd ios && xcodebuild test -scheme navapp
 
   build:
     macos:
@@ -35,7 +35,7 @@ jobs:
       - run:
           # build our application
           name: Build Application
-          command: xcodebuild
+          command: cd ios && xcodebuild
       - run:
           # compress Xcode's build output so that it can be stored as an artifact
           name: Compress app for storage
