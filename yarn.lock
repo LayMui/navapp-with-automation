@@ -1735,51 +1735,6 @@
     hoist-non-react-statics "^3.3.2"
     react-native-safe-area-view "^0.14.9"
 
-"@react-spring/animated@~9.2.0", "@react-spring/animated@~9.2.6-beta.0":
-  version "9.2.6"
-  resolved "https://registry.yarnpkg.com/@react-spring/animated/-/animated-9.2.6.tgz#58f30fb75d8bfb7ccbc156cfd6b974a8f3dfd54e"
-  integrity sha512-xjL6nmixYNDvnpTs1FFMsMfSC0tURwPCU3b2jWNriYGLfwZ7c/TcyaEZA7yiNnmdFnuR3f3Z27AqIgaFC083Cw==
-  dependencies:
-    "@react-spring/shared" "~9.2.6-beta.0"
-    "@react-spring/types" "~9.2.6-beta.0"
-
-"@react-spring/core@~9.2.0":
-  version "9.2.6"
-  resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.2.6.tgz#ae22338fe55d070caf03abb4293b5519ba620d93"
-  integrity sha512-uPHUxmu+w6mHJrfQTMtmGJ8iZEwiVxz9kH7dRyk69bkZJt9z+w0Oj3UF4J3VcECZsbm3HRhN2ogXSAaqGjwhQw==
-  dependencies:
-    "@react-spring/animated" "~9.2.6-beta.0"
-    "@react-spring/shared" "~9.2.6-beta.0"
-    "@react-spring/types" "~9.2.6-beta.0"
-
-"@react-spring/native@9.2.4":
-  version "9.2.4"
-  resolved "https://registry.yarnpkg.com/@react-spring/native/-/native-9.2.4.tgz#0fd335a44c05023f5428df444d8f1aa3da7abfc9"
-  integrity sha512-xKJWKh5qOhSclpL3iuGwJRLoZzTNvlBEnIrMs8yh8xvX6z9Lmnu4uGu5DpfrnM1GzBvRoktoCoLEx/VcEYFSng==
-  dependencies:
-    "@react-spring/animated" "~9.2.0"
-    "@react-spring/core" "~9.2.0"
-    "@react-spring/shared" "~9.2.0"
-    "@react-spring/types" "~9.2.0"
-
-"@react-spring/rafz@~9.2.6-beta.0":
-  version "9.2.6"
-  resolved "https://registry.yarnpkg.com/@react-spring/rafz/-/rafz-9.2.6.tgz#d97484003875bf5fb5e6ec22dee97cc208363e48"
-  integrity sha512-62SivLKEpo7EfHPkxO5J3g9Cr9LF6+1A1RVOMJhkcpEYtbdbmma/d63Xp8qpMPEpk7uuWxaTb6jjyxW33pW3sg==
-
-"@react-spring/shared@~9.2.0", "@react-spring/shared@~9.2.6-beta.0":
-  version "9.2.6"
-  resolved "https://registry.yarnpkg.com/@react-spring/shared/-/shared-9.2.6.tgz#2c84e62cc0cfbbbbeb5546acd46c1f4b248bc562"
-  integrity sha512-Qrm9fopKG/RxZ3Rw+4euhrpnB3uXSyiON9skHbcBfmkkzagpkUR66MX1YLrhHw0UchcZuSDnXs0Lonzt1rpWag==
-  dependencies:
-    "@react-spring/rafz" "~9.2.6-beta.0"
-    "@react-spring/types" "~9.2.6-beta.0"
-
-"@react-spring/types@~9.2.0", "@react-spring/types@~9.2.6-beta.0":
-  version "9.2.6"
-  resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.2.6.tgz#f60722fcf9f8492ae16d0bdc47f0ea3c2a16d2cf"
-  integrity sha512-l7mCw182DtDMnCI8CB9orgTAEoFZRtdQ6aS6YeEAqYcy3nQZPmPggIHH9DxyLw7n7vBPRSzu9gCvUMgXKpTflg==
-
 "@sideway/address@^4.1.0":
   version "4.1.2"
   resolved "https://registry.npmjs.org/@sideway/address/-/address-4.1.2.tgz"
@@ -2349,41 +2304,6 @@
   version "0.7.5"
   resolved "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.7.5.tgz"
   integrity sha512-V3BIhmY36fXZ1OtVcI9W+FxQqxVLsPKcNjWigIaa81dLC9IolJl5Mt4Cvhmr0flUnjSpTdrbMTSbXqYqV5dT6A==
-
-"@yaradigital/ahua-design-system.tokens.global-tokens@0.0.11":
-  version "0.0.11"
-  resolved "https://node.bit.dev/@yaradigital/ahua-design-system.tokens.global-tokens/-/@yaradigital-ahua-design-system.tokens.global-tokens-0.0.11.tgz#98073053872f0cfea66d4e8ab33dc5b0bc5ceb82"
-  integrity sha1-mAcwU4cvDP6mbU6Ksz3FsLxc64I=
-  dependencies:
-    core-js "^3.0.0"
-
-"@yaradigital/ahua-design-system.ui.ahua-icon@0.0.14":
-  version "0.0.14"
-  resolved "https://node.bit.dev/@yaradigital/ahua-design-system.ui.ahua-icon/-/@yaradigital-ahua-design-system.ui.ahua-icon-0.0.14.tgz#3939da43afc6a9a9ec80db6da20eec558d5cb998"
-  integrity sha1-OTnaQ6/GqansgNttog7sVY1cuZg=
-  dependencies:
-    "@yaradigital/ahua-design-system.tokens.global-tokens" "0.0.11"
-    core-js "^3.0.0"
-    react-native-svg "^12.1.0"
-
-"@yaradigital/ahua-design-system.ui.ahua-text-input@^0.0.15":
-  version "0.0.15"
-  resolved "https://node.bit.dev/@yaradigital/ahua-design-system.ui.ahua-text-input/-/@yaradigital-ahua-design-system.ui.ahua-text-input-0.0.15.tgz#b02d2885d2b282907908d77add0383fba1bcfc0c"
-  integrity sha1-sC0ohdKygpB5CNd63QOD+6G8/Aw=
-  dependencies:
-    "@react-spring/native" "9.2.4"
-    "@yaradigital/ahua-design-system.tokens.global-tokens" "0.0.11"
-    "@yaradigital/ahua-design-system.ui.ahua-icon" "0.0.14"
-    "@yaradigital/ahua-design-system.ui.ahua-text" "0.0.14"
-    core-js "^3.0.0"
-
-"@yaradigital/ahua-design-system.ui.ahua-text@0.0.14":
-  version "0.0.14"
-  resolved "https://node.bit.dev/@yaradigital/ahua-design-system.ui.ahua-text/-/@yaradigital-ahua-design-system.ui.ahua-text-0.0.14.tgz#e8e413e513c4e8b2c1f30fd151aa08092c296304"
-  integrity sha1-6OQT5RPE6LLB8w/RUaoICSwpYwQ=
-  dependencies:
-    "@yaradigital/ahua-design-system.tokens.global-tokens" "0.0.11"
-    core-js "^3.0.0"
 
 abort-controller@^3.0.0:
   version "3.0.0"
@@ -3492,11 +3412,6 @@ core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.npmjs.org/core-js/-/core-js-1.2.7.tgz"
   integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
-
-core-js@^3.0.0:
-  version "3.21.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.0.tgz#f479dbfc3dffb035a0827602dd056839a774aa71"
-  integrity sha512-YUdI3fFu4TF/2WykQ2xzSiTQdldLB4KVuL9WeAy5XONZYt5Cun/fpQvctoKbCgvPhmzADeesTk/j2Rdx77AcKQ==
 
 core-util-is@1.0.2:
   version "1.0.2"
@@ -7733,7 +7648,7 @@ react-native-screens@~3.8.0:
   dependencies:
     warn-once "^0.1.0"
 
-react-native-svg@^12.1.0, react-native-svg@^12.1.1:
+react-native-svg@^12.1.1:
   version "12.1.1"
   resolved "https://registry.npmjs.org/react-native-svg/-/react-native-svg-12.1.1.tgz"
   integrity sha512-NIAJ8jCnXGCqGWXkkJ1GTzO4a3Md5at5sagYV8Vh4MXYnL4z5Rh428Wahjhh+LIjx40EE5xM5YtwyJBqOIba2Q==
@@ -9087,9 +9002,9 @@ typescript@^4.5.5:
   integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
 
 ua-parser-js@^0.7.30:
-  version "0.7.31"
-  resolved "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.31.tgz"
-  integrity sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==
+  version "0.7.33"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.33.tgz#1d04acb4ccef9293df6f70f2c3d22f3030d8b532"
+  integrity sha512-s8ax/CeZdK9R/56Sui0WM6y9OFREJarMRHqLB2EwkovemBxNQ+Bqu8GAsUnVcXKgphb++ghr/B2BZx4mahujPw==
 
 ua-parser-js@^1.0.1:
   version "1.0.2"
